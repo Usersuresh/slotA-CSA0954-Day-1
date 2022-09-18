@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+    public static void details()
+    {
+        int p,t,r;
+	    float si;
+	    String s;
+        Scanner sc=new Scanner(System.in);
+	    System.out.print("Senior citizen(yes/no): ");
+	    s=sc.nextLine();
+		System.out.print("Enter the principle ammount: ");
+		p=sc.nextInt();
+		System.out.print("Enter the number of years: ");
+		t=sc.nextInt();
+    if((p<0) || (t<=0))
+		{
+		    System.out.println("Invalid");
+		    return;
+		}
+		if(s.equals("yes"))
+	    {
+	        r=12;
+	        si=(p*t*r)/100;
+	        System.out.println("Interest= "+si);
+	    }
+	    else if(s.equals("no"))
+	    {
+	        r=10;
+	        si=(p*t*r)/100;
+	        System.out.println("Interest= "+si);
+	    }
+	    else
+	    {
+	        System.out.println("Invalid");
+	    }
+    }
+	public static void main(String[] args) 
+	{
+	    details();
+	}
+}
