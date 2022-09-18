@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int age,x;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter your age: ");
+	    if(!sc.hasNextInt())
+	    {
+	        System.out.println("Invalid Enter only integers");
+	        return;
+	    }
+	    age=sc.nextInt();
+	    if(age<0)
+	    {
+	        System.out.println("Invalid Age can not be Negative");
+	        return;
+	    }
+	    if(age>=18)
+	    {
+	        System.out.println("You are allowed to vote");
+	    }
+	    else
+		{
+		    x=18-age;
+		    System.out.println("You are allowed to vote after "+x+" years");
+		}
+	}
+}
